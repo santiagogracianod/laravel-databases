@@ -10,7 +10,7 @@ class ProductSeeder extends Seeder
 
     public function run(): void
     {
-        $products = [
+        /* $products = [
             [
                 'name' => 'Product 1',
                 'short_description' => 'Short description for product 1',
@@ -33,7 +33,9 @@ class ProductSeeder extends Seeder
 
         foreach ($products as $product){
             Product::create($product);
-        }
+        } */
+
+        Product::factory()->count(50)->create();
 
 
     }
